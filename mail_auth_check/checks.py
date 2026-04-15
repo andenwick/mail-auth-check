@@ -37,6 +37,11 @@ COMMON_SELECTORS = [
     "selector",
     # Proofpoint / Mimecast
     "pp", "mimecast",
+    # Modern ESPs
+    "resend",          # Resend
+    "hs1", "hs2",      # HubSpot
+    "scph0920",        # SparkPost
+    "klaviyo",         # Klaviyo
     # Misc
     "MDaemon", "domk", "dkim2024", "dkim2025",
 ]
