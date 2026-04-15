@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mail-auth-check"
+version = "0.1.0"
+description = "Check SPF, DKIM, DMARC, and MX records for a domain. Verify email-authentication posture in one command."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "Anden Wickstrand", email = "anden@sentrypeak.com" }
+]
+keywords = ["email", "dmarc", "spf", "dkim", "mx", "security", "dns"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: Name Service (DNS)",
+    "Topic :: Security",
+]
+dependencies = [
+    "dnspython>=2.6.0",
+]
+
+[project.scripts]
+mail-auth-check = "mail_auth_check.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/andenwick/mail-auth-check"
+Repository = "https://github.com/andenwick/mail-auth-check"
+Issues = "https://github.com/andenwick/mail-auth-check/issues"
+
+[tool.setuptools.packages.find]
+include = ["mail_auth_check*"]
