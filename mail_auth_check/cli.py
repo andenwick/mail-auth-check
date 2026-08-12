@@ -1,4 +1,4 @@
-"""Command-line entry point for mail-auth-check."""
+"""Command-line entry point for MailKnocker."""
 from __future__ import annotations
 
 import argparse
@@ -181,7 +181,7 @@ def format_markdown(result: DomainResult) -> str:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
-        prog="mail-auth-check",
+        prog="mailknocker",
         description="Check SPF, DKIM, DMARC, and MX records for a domain.",
     )
     parser.add_argument("domain", help="Domain to check (e.g. example.com)")

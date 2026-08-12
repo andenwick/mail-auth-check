@@ -1,4 +1,4 @@
-# mail-auth-check
+# MailKnocker
 
 Check SPF, DKIM, DMARC, and MX records for a domain. Verify email-authentication posture in one command.
 
@@ -7,7 +7,7 @@ Every finding comes from direct DNS queries. No API keys, no cloud service, no t
 ## Install
 
 ```
-pip install mail-auth-check
+pip install mailknocker
 ```
 
 Requires Python 3.10+. Only external dependency is [dnspython](https://www.dnspython.org/).
@@ -15,7 +15,7 @@ Requires Python 3.10+. Only external dependency is [dnspython](https://www.dnspy
 ## Usage
 
 ```
-$ mail-auth-check example.com
+$ mailknocker example.com
 
 === Email authentication for example.com ===
 
